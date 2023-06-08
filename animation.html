@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <title>animation page</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+      body {
+        min-height: 1000vh;
+        touch-action: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+      }
+      svg {
+        position: fixed;
+        animation-delay: calc(var(--scroll)*-1s)
+      }
+      .animation {
+        background-color: #fff;
+      }
+      #person {
+        background: url(./images/img-animation.png) no-repeat;
+        width: 70px;
+        height: 98px;
+        background-size: 1272px;
+        background-position: 0 0;
+        transform: translate3d(100px, 170px, 0);
+        z-index: 10;
+        position: fixed;
+        
+      }
+      .down {
+        background-position: 0 -181px;
+      }
+      
+    </style>
+  </head>
+  <body class="animation">
+    <div class="road"> 
+      <div id="person"></div>
+      <svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 700" style="top: 0px; left: 0px;">
+        <path id="lineAB" d="M 100 200 l 900 0" stroke="#000" stroke-width="3" fill="none"></path>
+        <path id="lineBC" d="M 1000 200 l 0 100 " stroke="#000" stroke-width="3" fill="none"></path>
+        <path id="lineBC" d="M 1000 300 l 80 0" stroke="#000" stroke-width="3" fill="none"></path>
+        <path id="lineBD" d="M 1080 300 l 0 700" stroke="#000" stroke-width="3" fill="none"></path>
+      </svg>
+    </div>
+  </body>
+  <script src="scripts/animation.js"></script>
+</html>
